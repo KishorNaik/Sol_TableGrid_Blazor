@@ -1,0 +1,91 @@
+﻿@page "/"
+@using Sol.Ui.Models
+
+<TableGridComponent Items="@ListUsers" PageSize="4">
+    <GridHeader>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </GridHeader>
+    <GridRow>
+        <td>@context.FirstName</td>
+        <td>@context.LastName</td>
+    </GridRow>
+</TableGridComponent>
+
+@code {
+
+    public List<UserModel> ListUsers { get; set; }
+
+    protected override void OnInitialized()
+    {
+        ListUsers = new List<UserModel>();
+
+        ListUsers.Add(new UserModel()
+        {
+            FirstName = "Kishor",
+            LastName = "Naik"
+        });
+
+        ListUsers.Add(new UserModel()
+        {
+            FirstName = "Ambika",
+            LastName = "Garg"
+        });
+
+        ListUsers.Add(new UserModel()
+        {
+            FirstName = "Vijith",
+            LastName = "Shetty"
+        });
+
+        ListUsers.Add(new UserModel()
+        {
+            FirstName = "Ashwini",
+            LastName = "Bhangle"
+        });
+
+        ListUsers.Add(new UserModel()
+        {
+            FirstName = "Sonal",
+            LastName = "Joshi"
+        });
+
+        ListUsers.Add(new UserModel()
+        {
+            FirstName = "Swathi",
+            LastName = "Mane"
+        });
+
+        ListUsers.Add(new UserModel()
+        {
+            FirstName = "Rajshree",
+            LastName = "Mahtre"
+        });
+
+        ListUsers.Add(new UserModel()
+        {
+            FirstName = "Jayshree",
+            LastName = "Wagh"
+        });
+
+        ListUsers.Add(new UserModel()
+        {
+            FirstName = "Nidhi",
+            LastName = "Singh"
+        });
+
+        ListUsers.Add(new UserModel()
+        {
+            FirstName = "Pranesh",
+            LastName = "Naik"
+        });
+
+        ListUsers.Add(new UserModel()
+        {
+            FirstName = "Vinit",
+            LastName = "Suryarao"
+        });
+
+    }
+
+}
